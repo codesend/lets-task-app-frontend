@@ -127,11 +127,6 @@ const TaskList = () => {
          </div>
         )}
         <hr />
-        {isLoading && (
-                <div className="--flex-center">
-                <img src={loaderCube} alt="Loading" />
-                </div>
-        )}
         {
             !isLoading && tasks.length === 0 ? (
             <p>No tasks exist! Please add a task.</p>
@@ -152,6 +147,11 @@ const TaskList = () => {
             </>
             )
         }
+        {isLoading && (
+                <div className="--flex-center">
+                <img src={loaderCube} alt="Loading" />
+                </div>
+        )}
     </div>
   )
 }
